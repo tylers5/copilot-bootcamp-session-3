@@ -131,18 +131,18 @@ function TaskList({ onEdit }) {
               py: 1,
               mb: 1,
               borderRadius: 2,
-              background: task.completed 
-                ? 'rgba(158, 158, 158, 0.08)' 
-                : 'rgba(25, 118, 210, 0.05)',
+              background: task.completed
+                ? 'rgba(122, 122, 122, 0.08)'
+                : 'rgba(7, 242, 230, 0.06)',
               border: '1px solid',
-              borderColor: task.completed 
-                ? 'rgba(158, 158, 158, 0.15)' 
-                : 'rgba(25, 118, 210, 0.15)',
+              borderColor: task.completed
+                ? 'var(--task-unselected-color)'
+                : 'var(--task-selected-color)',
               transition: 'all 0.2s ease-in-out',
               '&:hover': {
-                background: task.completed 
-                  ? 'rgba(158, 158, 158, 0.12)' 
-                  : 'rgba(25, 118, 210, 0.1)',
+                background: task.completed
+                  ? 'rgba(122, 122, 122, 0.12)'
+                  : 'rgba(7, 242, 230, 0.12)',
                 transform: 'translateX(4px)',
                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
               }
@@ -167,8 +167,8 @@ function TaskList({ onEdit }) {
                 <Typography 
                   variant="body2"
                   sx={{ 
-                    textDecoration: task.completed ? 'line-through' : 'none', 
-                    color: task.completed ? '#9e9e9e' : '#212121',
+                    textDecoration: task.completed ? 'line-through' : 'none',
+                    color: task.completed ? 'var(--task-unselected-color)' : '#212121',
                     fontWeight: task.completed ? 400 : 600,
                     fontSize: '1rem'
                   }}

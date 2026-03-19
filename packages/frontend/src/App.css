@@ -2,6 +2,8 @@
   --priority-p1-color: #d32f2f;
   --priority-p2-color: #f57c00;
   --priority-p3-color: #757575;
+  --task-selected-color: #07F2E6;
+  --task-unselected-color: #7A7A7A;
 }
 
 .priority-badge {
