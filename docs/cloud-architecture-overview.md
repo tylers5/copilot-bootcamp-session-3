@@ -1,6 +1,8 @@
----
-title: Cloud Architecture Overview
----
+# Cloud Architecture Overview
+
+This document uses a Mermaid sequence diagram to show how a user creates a TODO in the monorepo application.
+
+```mermaid
 sequenceDiagram
     actor User
     participant Browser
@@ -20,3 +22,4 @@ sequenceDiagram
 
     Note over Frontend,API: The frontend sends task data to the backend API.
     Note over API,Store: The backend persists the task in an in-memory store.
+```
