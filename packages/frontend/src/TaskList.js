@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  List, ListItem, ListItemText, IconButton, Checkbox, Typography, Box, CircularProgress, Paper, Chip
+  List, ListItem, ListItemText, IconButton, Checkbox, Typography, Box, CircularProgress, Paper, Chip, Tooltip
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -220,6 +220,24 @@ function TaskList({ onEdit }) {
                   }}
                 />
               )}
+<Tooltip title={`Priority: ${task.priority || 'P3'}`}>
+                <Chip
+                  label={task.priority || 'P3'}
+                  size="small"
+                  data-testid={`priority-badge-${task.id}`}
+                  sx={{
+                    height: 20,
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    color: 'white',
+                    background: {
+                      P1: '#d32f2f',
+                      P2: '#f57c00',
+                      P3: '#757575',
+                    }[task.priority || 'P3'] || '#757575',
+                  }}
+                />
+              </Tooltip>
               <Box 
                 sx={{ 
                   display: 'flex', 

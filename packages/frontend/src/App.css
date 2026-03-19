@@ -1,3 +1,30 @@
+:root {
+  --priority-p1-color: #d32f2f;
+  --priority-p2-color: #f57c00;
+  --priority-p3-color: #757575;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.priority-p1 {
+  background-color: var(--priority-p1-color);
+}
+
+.priority-p2 {
+  background-color: var(--priority-p2-color);
+}
+
+.priority-p3 {
+  background-color: var(--priority-p3-color);
+}
+
 .App {
   text-align: center;
   max-width: 800px;
